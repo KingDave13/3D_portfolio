@@ -6,4 +6,4 @@ const Computers = () => {
   )
 }
 
-export default Computers
+export default Computers;
