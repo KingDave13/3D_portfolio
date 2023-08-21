@@ -23,9 +23,9 @@ const Hero = () => {
             user interfaces and amazing web applications.
           </p>
         </div>
-
-        <div />
       </div>
+
+      <ComputersCanvas />
     </section>
   )
 }
