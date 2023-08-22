@@ -8,10 +8,15 @@ const Computers = () => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15}
+      <hemisphereLight intensity={1.5}
       groundColor='black' />
-      <pointLight intensity={1} />
-      <primitive object={computer.scene} />
+      <pointLight intensity={4} />
+      <primitive 
+      object={computer.scene} 
+      scale={0.75}
+      position={[ 0, -3.25, -1.5 ]}
+      rotation={[ -0.01, -0.2, -0.1 ]}
+      />
     </mesh>
   );
 };
