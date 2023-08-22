@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import { CanvasLoader } from '../Loader';
+import CanvasLoader from '../Loader';
 
 const Computers = () => {
   const computer = useGLTF('./desktop_pc/scene.gltf');
@@ -13,8 +13,8 @@ const Computers = () => {
       <pointLight intensity={1} />
       <primitive object={computer.scene} />
     </mesh>
-  )
-}
+  );
+};
 
 const ComputersCanvas = () => {
   return (
@@ -30,9 +30,13 @@ const ComputersCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
         />
-      </Suspense>
-    </Canvas>
-  )
-}
 
-export default Computers;
+        <Computers />
+      </Suspense>
+
+      <Preload all />
+    </Canvas>
+  );
+};
+
+export default ComputersCanvas;
