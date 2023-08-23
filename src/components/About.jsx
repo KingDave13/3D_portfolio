@@ -42,7 +42,7 @@ const About = () => {
   const contentContainerStyle = {
     maxHeight: isContentExpanded ? 'none' : '200px',
     overflow: 'hidden',
-    transition: 'max-height 0.3s ease-in-out',
+    transition: 'max-height 0.3s ease-in-out'
   };
 
   return (
@@ -77,7 +77,17 @@ const About = () => {
         or ask any questions you may have.
       </motion.p>
 
-      <div className='mt-20 flex lg:justify-between sm:gap-7 flex-wrap gap-10'>
+      <button
+        id='readMoreButton'
+        className='text-blue-500 hover:underline focus:outline-none 
+        cursor-pointer'
+        onClick={toggleContent}
+      >
+        {isContentExpanded ? 'Read Less' : 'Read More'}
+      </button>
+
+      <div className='mt-20 flex lg:justify-between sm:gap-7 flex-wrap 
+      gap-10'>
         {services.map((service, index) => (
           <ServiceCard 
             key={service.title}
