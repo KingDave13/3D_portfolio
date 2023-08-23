@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
@@ -32,11 +33,21 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
+  const [isContentExpanded, setIsContentExpanded] = useState(false);
+
+  const toggleContent = () => {
+    setIsContentExpanded(!isContentExpanded);
+  };
+
+  const contentContainerStyle = {
+    maxHeight: isContentExpanded ? 'none' : '200px',
+    overflow: 'hidden',
+    transition: 'max-height 0.3s ease-in-out',
+  };
+
   return (
     <>
-      <motion.div
-        variants={textVariant()}
-      >
+      <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
@@ -44,6 +55,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className='text-secondary text-[17px] max-w-7xl leading-[30px]'
+        style={contentContainerStyle}
       >
         I'm a versatile professional with extensive experience in 
         software development, graphic design and civil engineering. 
@@ -65,7 +77,7 @@ const About = () => {
         or ask any questions you may have.
       </motion.p>
 
-      <div className='mt-20 flex justify-between flex-wrap gap-10'>
+      <div className='mt-20 flex lg:justify-between sm:gap-7 flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard 
             key={service.title}
