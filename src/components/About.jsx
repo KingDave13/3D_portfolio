@@ -37,6 +37,12 @@ const About = () => {
         Please feel free to reach out to me to initiate this conversation 
         or ask any questions you may have.
       </motion.p>
+
+      <div className='mt-20 flex flex-wrap gap-10'>
+        {services.map((service, index) => (
+
+        ))}
+      </div>
     </>
   )
 }
