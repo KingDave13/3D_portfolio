@@ -10,7 +10,7 @@ const ServiceCard = ({ index, title, icon }) => {
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
         className='w-full green-pink-gradient p-[1px] rounded-[20px]
-        shadow-card'
+        shadow-card cursor-pointer'
       >
         <div options={{ max: 45, scale: 1, speed: 450 }}
           className='bg-tertiary rounded-[20px] py-5 px-12
@@ -19,7 +19,11 @@ const ServiceCard = ({ index, title, icon }) => {
           <img src={icon} alt={title}
           className='w-16 h-16 object-contain'
           />
-          <h3>{title}</h3>
+          <h3
+            className='text-white text-[20px] font-bold text-center'
+          >
+            {title}
+          </h3>
         </div>
       </motion.div>
     </Tilt>
