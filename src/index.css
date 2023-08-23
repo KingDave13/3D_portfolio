@@ -15,8 +15,13 @@
 
 .hash-span {
   margin-top: -100px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
   display: block;
+}
+@media screen and (max-width: 500px) {
+  .hash-span {
+    padding-bottom: 40px;
+  }
 }
 
 .black-gradient {
