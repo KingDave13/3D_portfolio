@@ -40,7 +40,7 @@ const About = () => {
   };
 
   const contentContainerStyle = {
-    maxHeight: isContentExpanded ? 'none' : '180px',
+    maxHeight: isContentExpanded ? 'none' : '185px',
     overflow: 'hidden',
     transition: 'max-height 0.3s ease-in-out'
   };
