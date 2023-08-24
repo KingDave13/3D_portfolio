@@ -1,4 +1,8 @@
-import React from 'react'
+import { VerticalTimeline, VerticalTimelineElement 
+} from 'react-vertical-timeline-component';
+import { motion } from 'framer-motion';
+import 'react-vertical-timeline-component/style.min.css';
+import { styles } from '../styles';
 
 const Experience = () => {
   return (
@@ -6,4 +10,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default Experience;

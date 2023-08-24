@@ -81,7 +81,7 @@ const About = () => {
         <div className='flex justify-start'>
           <button
             id='readMoreButton'
-            className='text-green-500 hover:underline focus:outline-none 
+            className='text-teal-300 hover:underline focus:outline-none 
             cursor-pointer'
             onClick={toggleContent}
           >
@@ -92,7 +92,7 @@ const About = () => {
 
 
       <div className='mt-20 flex lg:justify-between sm:gap-7 flex-wrap 
-      gap-10'>
+      gap-10 align-cards'>
         {services.map((service, index) => (
           <ServiceCard 
             key={service.title}
