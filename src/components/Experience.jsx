@@ -33,6 +33,10 @@ const ExperienceCard = ({ experience }) => {
           {experience.company_name}
         </p>
       </div>
+
+      <ul className='mt-5 list-disc ml-5 space-y-2'>
+
+      </ul>
     </VerticalTimelineElement>
   )
 };
