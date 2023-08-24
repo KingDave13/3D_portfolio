@@ -15,7 +15,7 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div>
+        <div className='flex justify-center items-center w-full h-full'>
           <img 
             src={experience.icon}
             alt={experience.company_name}
@@ -25,9 +25,13 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='text-white text-[24px]'>
+        <h3 className='text-white text-[24px] font-bold'>
           {experience.title}
         </h3>
+        <p className='text-secondary text-[16px] font-semibold'
+        style={{ margin: 0 }}>
+          {experience.company_name}
+        </p>
       </div>
     </VerticalTimelineElement>
   )
