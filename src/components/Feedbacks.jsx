@@ -4,6 +4,12 @@ import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 import { testimonials } from '../constants';
 
+const FeedbackCard = ({ 
+  index, testimonial, name, designation, company, image }) => (
+    <motion.div>
+      
+    </motion.div>
+);
 
 const Feedbacks = () => {
   return (
