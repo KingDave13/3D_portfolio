@@ -6,6 +6,11 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
+// E-R_jyLgNaP5en5j-
+
+// template_sy35l5o
+
+// service_xfy39rq
 
 const Contact = () => {
 
@@ -18,7 +23,12 @@ const [form, setForm] = useState({
 
 const [Loading, setLoading] = useState(false);
 
-const handleChange = (e) => {}
+const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  setForm({ ...form, [name]: value })
+
+}
 
 const handleSubmit = (e) => {}
 
