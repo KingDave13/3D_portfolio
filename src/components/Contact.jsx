@@ -30,7 +30,11 @@ const handleChange = (e) => {
 
 }
 
-const handleSubmit = (e) => {}
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setLoading(true);
+  emailjs.send()
+}
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex 
