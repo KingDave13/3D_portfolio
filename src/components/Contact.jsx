@@ -76,11 +76,10 @@ const handleSubmit = (e) => {}
             </span>
             <textarea 
               rows='7'
-              type='text'
-              name='name'
-              value={form.name}
+              name='message'
+              value={form.message}
               onChange={handleChange}
-              placeholder="Your message"
+              placeholder="What would you love to say to me?"
               className='bg-tertiary py-4 px-6 outline-none border-none
               placeholder:text-secondary text-white rounded-lg'
             />
