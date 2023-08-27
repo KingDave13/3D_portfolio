@@ -84,6 +84,14 @@ const handleSubmit = (e) => {}
               placeholder:text-secondary text-white rounded-lg'
             />
           </label>
+
+          <button
+            type='submit'
+            className='bg-tertiary py-3 px-8 outline-none w-fit
+            text-white font-medium shadow-md shadow-primary rounded-xl'
+          >
+            {Loading ? 'Sending...' : 'Send'}
+          </button>
         </form>
       </motion.div>
     </div>
