@@ -14,7 +14,13 @@ const [form, setForm] = useState({
   name: '',
   email: '',
   message: ''
-})
+});
+
+const [Loading, setLoading] = useState(false);
+
+const handleChange = (e) => {}
+
+const handleSubmit = (e) => {}
 
   return (
     <div>Contact</div>
