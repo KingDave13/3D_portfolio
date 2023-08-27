@@ -35,8 +35,12 @@ const handleSubmit = (e) => {}
           Contact.
         </h2>
 
-        <form>
-          
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className='mt-12 flex flex-col gap-8'
+        >
+
         </form>
       </motion.div>
     </div>
