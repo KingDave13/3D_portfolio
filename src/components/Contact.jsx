@@ -51,7 +51,37 @@ const handleSubmit = (e) => {}
               onChange={handleChange}
               placeholder="What's your name?"
               className='bg-tertiary py-4 px-6 outline-none border-none
-              placeholder:text-secondary text-white rounded-lg font-medium'
+              placeholder:text-secondary text-white rounded-lg'
+            />
+          </label>
+
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>
+              Your Email
+            </span>
+            <input 
+              type='email'
+              name='email'
+              value={form.email}
+              onChange={handleChange}
+              placeholder="What's your email?"
+              className='bg-tertiary py-4 px-6 outline-none border-none
+              placeholder:text-secondary text-white rounded-lg'
+            />
+          </label>
+
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>
+              Your Name
+            </span>
+            <input 
+              type='text'
+              name='name'
+              value={form.name}
+              onChange={handleChange}
+              placeholder="What's your name?"
+              className='bg-tertiary py-4 px-6 outline-none border-none
+              placeholder:text-secondary text-white rounded-lg'
             />
           </label>
         </form>
