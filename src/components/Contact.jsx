@@ -72,14 +72,15 @@ const handleSubmit = (e) => {}
 
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>
-              Your Name
+              Your Message
             </span>
-            <input 
+            <textarea 
+              rows='7'
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder="Your message"
               className='bg-tertiary py-4 px-6 outline-none border-none
               placeholder:text-secondary text-white rounded-lg'
             />
