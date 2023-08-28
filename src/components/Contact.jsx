@@ -6,12 +6,6 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
-// E-R_jyLgNaP5en5j-
-
-// template_sy35l5o
-
-// service_xfy39rq
-
 const Contact = () => {
 
 const formRef = useRef();
@@ -46,7 +40,21 @@ const handleSubmit = (e) => {
     },
     'E-R_jyLgNaP5en5j-'
     )
-    .then()
+    .then(() => {
+      setLoading(false);
+      alert('Thanks for reaching out, I will be in touch.');
+
+      setForm({
+        name: '',
+        email: '',
+        message: ''
+      })
+    }, (error) => {
+      setLoading(false);
+
+      console.log(error);
+      alert('Something went wrong')
+    })
 }
 
   return (
