@@ -33,7 +33,20 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
   e.preventDefault();
   setLoading(true);
-  emailjs.send()
+
+  emailjs.send(
+    'service_xfy39rq', 
+    'template_sy35l5o',
+    {
+      from_name: form.name,
+      to_name: 'David',
+      from_email: form.email,
+      to_email: 'okaliwedavid@gmail.com',
+      message: form.message
+    },
+    'E-R_jyLgNaP5en5j-'
+    )
+    .then()
 }
 
   return (
