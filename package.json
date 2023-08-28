@@ -2,7 +2,7 @@
   "name": "y",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/KingDave13/3D_portfolio",
+  "homepage": "https://KingDave13.github.io/3D_portfolio",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
