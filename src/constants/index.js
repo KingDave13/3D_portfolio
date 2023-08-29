@@ -19,7 +19,7 @@ import {
     starbucks,
     tesla,
     shopify,
-    carrent,
+    plugg,
     jobit,
     tripguide,
     threejs,
@@ -190,24 +190,24 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Plugg Resources",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Web application for my IT agency built alongside my colleagues.",
       tags: [
         {
-          name: "react",
+          name: "html",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "css",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "php",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
+      image: plugg,
       source_code_link: "https://github.com/KingDave13",
     },
     {
