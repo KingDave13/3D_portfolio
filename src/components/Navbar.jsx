@@ -22,7 +22,7 @@ const Navbar = () => {
         }}
         >
           <img src={logo} alt='logo' 
-          className='w-9 h-9 object-contain'/>
+          className='w-9 h-9 object-contain rounded-full'/>
           <p className='text-white text-[18px] font-bold 
           cursor-pointer flex'>David &nbsp; <span 
           className='sm:block hidden'> Okaliwe</span>
