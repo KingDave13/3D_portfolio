@@ -37,7 +37,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value })
+    setForm({ ...form, [name]: value });
   }
 
   const handleSubmit = (e) => {
@@ -51,36 +51,34 @@ const Contact = () => {
     setLoading(true);
 
     emailjs.send(
-        'service_xfy39rq',
-        'template_sy35l5o',
-        {
-          from_name: form.name,
-          to_name: 'David',
-          from_email: form.email,
-          to_email: 'okaliwedavid@gmail.com',
-          message: form.message,
-        },
-        'E-R_jyLgNaP5en5j-'
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert('Thanks for reaching out, I will be in touch.');
-
-          setForm({
-            name: '',
-            email: '',
-            message: '',
-          });
-        },
-        (error) => {
-          setLoading(false);
-
-          console.log(error);
-          alert('Something went wrong');
-        }
-      );
-  };
+      'service_xfy39rq',
+      'template_sy35l5o',
+      {
+        from_name: form.name,
+        to_name: 'David',
+        from_email: form.email,
+        to_email: 'okaliwedavid@gmail.com',
+        message: form.message,
+      },
+      'E-R_jyLgNaP5en5j-'
+    )
+    .then(
+      () => {
+        setLoading(false);
+        setModalOpen(true);
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        });
+      },
+      (error) => {
+        setLoading(false);
+        console.log(error);
+        setModalOpen(true);
+      }
+    );
+  }
 
 
   return (
@@ -99,7 +97,7 @@ const Contact = () => {
           onClose={() => setModalOpen(false)}
         />
       )}
-      
+
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
