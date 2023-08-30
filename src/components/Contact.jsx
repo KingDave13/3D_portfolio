@@ -9,9 +9,9 @@ import { slideIn } from '../utils/motion';
 const Modal = ({ message, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center
-     bg-black bg-opacity-50">
+     bg-black bg-opacity-50 z-50">
       <div className="bg-white p-6 rounded shadow">
-        <p className="text-center mb-4">{message}</p>
+        <p className="text-center mb-4 text-secondary">{message}</p>
         <button
           onClick={onClose}
           className="bg-blue-500 text-white px-4 py-2 rounded"
