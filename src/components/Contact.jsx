@@ -26,36 +26,46 @@ const handleChange = (e) => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
+
+  if (!form.name || !form.email || !form.message) {
+    alert('Please fill out all the required fields.');
+    return;
+  }
+
   setLoading(true);
 
   emailjs.send(
-    'service_xfy39rq', 
-    'template_sy35l5o',
-    {
-      from_name: form.name,
-      to_name: 'David',
-      from_email: form.email,
-      to_email: 'okaliwedavid@gmail.com',
-      message: form.message
-    },
-    'E-R_jyLgNaP5en5j-'
+      'service_xfy39rq',
+      'template_sy35l5o',
+      {
+        from_name: form.name,
+        to_name: 'David',
+        from_email: form.email,
+        to_email: 'okaliwedavid@gmail.com',
+        message: form.message,
+      },
+      'E-R_jyLgNaP5en5j-'
     )
-    .then(() => {
-      setLoading(false);
-      alert('Thanks for reaching out, I will be in touch.');
+    .then(
+      () => {
+        setLoading(false);
+        alert('Thanks for reaching out, I will be in touch.');
 
-      setForm({
-        name: '',
-        email: '',
-        message: ''
-      })
-    }, (error) => {
-      setLoading(false);
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        });
+      },
+      (error) => {
+        setLoading(false);
 
-      console.log(error);
-      alert('Something went wrong')
-    })
-}
+        console.log(error);
+        alert('Something went wrong');
+      }
+    );
+};
+
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex 
