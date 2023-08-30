@@ -6,70 +6,100 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
+const Modal = ({ message, onClose }) => {
+  return (
+    <div className="fixed inset-0 flex items-center justify-center
+     bg-black bg-opacity-50">
+      <div className="bg-white p-6 rounded shadow">
+        <p className="text-center mb-4">{message}</p>
+        <button
+          onClick={onClose}
+          className="bg-blue-500 text-white px-4 py-2 rounded"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const Contact = () => {
 
-const formRef = useRef();
-const [form, setForm] = useState({
-  name: '',
-  email: '',
-  message: ''
-});
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-const [Loading, setLoading] = useState(false);
+  const [Loading, setLoading] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-const handleChange = (e) => {
-  const { name, value } = e.target;
-
-  setForm({ ...form, [name]: value })
-
-}
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-
-  if (!form.name || !form.email || !form.message) {
-    alert('Please fill out all the required fields.');
-    return;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value })
   }
 
-  setLoading(true);
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  emailjs.send(
-      'service_xfy39rq',
-      'template_sy35l5o',
-      {
-        from_name: form.name,
-        to_name: 'David',
-        from_email: form.email,
-        to_email: 'okaliwedavid@gmail.com',
-        message: form.message,
-      },
-      'E-R_jyLgNaP5en5j-'
-    )
-    .then(
-      () => {
-        setLoading(false);
-        alert('Thanks for reaching out, I will be in touch.');
+    if (!form.name || !form.email || !form.message) {
+      setModalOpen(true);
+      return;
+    }
 
-        setForm({
-          name: '',
-          email: '',
-          message: '',
-        });
-      },
-      (error) => {
-        setLoading(false);
+    setLoading(true);
 
-        console.log(error);
-        alert('Something went wrong');
-      }
-    );
-};
+    emailjs.send(
+        'service_xfy39rq',
+        'template_sy35l5o',
+        {
+          from_name: form.name,
+          to_name: 'David',
+          from_email: form.email,
+          to_email: 'okaliwedavid@gmail.com',
+          message: form.message,
+        },
+        'E-R_jyLgNaP5en5j-'
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert('Thanks for reaching out, I will be in touch.');
+
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          });
+        },
+        (error) => {
+          setLoading(false);
+
+          console.log(error);
+          alert('Something went wrong');
+        }
+      );
+  };
 
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex 
     gap-10 overflow-hidden'>
+
+      {modalOpen && (
+        <Modal
+          message={
+            !form.name || !form.email || !form.message
+              ? "Please fill out all the required fields."
+              : Loading
+              ? "Sending..."
+              : "Thanks for reaching out, I will be in touch."
+          }
+          onClose={() => setModalOpen(false)}
+        />
+      )}
+      
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
