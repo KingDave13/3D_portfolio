@@ -99,14 +99,8 @@ const Contact = () => {
     gap-10 overflow-hidden'>
 
       {modalOpen && (
-        <Modal
-        message={
-            !form.name || !form.email || !form.message
-            ? 'Please fill out all the required fields.'
-            : 'Thanks for reaching out, I will be in touch.'
-        }
-        onClose={() => setModalOpen(false)}
-      />
+        <Modal message={modalMessage} 
+        onClose={() => setModalOpen(false)} />
       )}
 
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
