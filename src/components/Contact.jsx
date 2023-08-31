@@ -12,7 +12,9 @@ const Modal = ({ message, onClose }) => {
      bg-black bg-opacity-50 z-50">
       <div className="bg-white p-6 rounded-md shadow flex flex-col
       items-center justify-center">
-        <p className="text-center mb-4 text-tertiary">{message}</p>
+        <p className="text-center mb-4 font-medium text-tertiary">
+          {message}
+        </p>
         <button
           onClick={onClose}
           className="bg-tertiary text-white px-4 py-2 rounded-md"
