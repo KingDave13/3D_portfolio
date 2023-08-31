@@ -101,8 +101,12 @@ const Contact = () => {
     gap-10 overflow-hidden'>
 
       {modalOpen && (
-        <Modal message={modalMessage} 
-        onClose={() => setModalOpen(false)} />
+        <Modal
+        message={modalMessage}
+        onClose={() => setModalOpen(false)}
+        showOkButton={modalMessage !== 
+          'Thanks for reaching out, I will be in touch.'}
+      />
       )}
 
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
