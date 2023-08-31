@@ -77,7 +77,7 @@ const Contact = () => {
         setModalOpen(true);
         setTimeout(() => {
           setModalOpen(false); 
-        }, 3000); // Change the duration as needed (in milliseconds)
+        }, 2000); 
 
       },
       (error) => {
@@ -95,15 +95,13 @@ const Contact = () => {
 
       {modalOpen && (
         <Modal
-          message={
+        message={
             !form.name || !form.email || !form.message
-              ? "Please fill out all the required fields."
-              : Loading
-              ? "Sending..."
-              : "Thanks for reaching out, I will be in touch."
-          }
-          onClose={() => setModalOpen(false)}
-        />
+            ? 'Please fill out all the required fields.'
+            : 'Thanks for reaching out, I will be in touch.'
+        }
+        onClose={() => setModalOpen(false)}
+      />
       )}
 
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
