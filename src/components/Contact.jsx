@@ -6,7 +6,7 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
-const Modal = ({ message, onClose }) => {
+const Modal = ({ message, onClose, showOkButton }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center
      bg-black bg-opacity-50 z-50">
@@ -15,12 +15,14 @@ const Modal = ({ message, onClose }) => {
         <p className="text-center mb-4 font-medium text-tertiary">
           {message}
         </p>
-        <button
-          onClick={onClose}
-          className="bg-tertiary text-white px-4 py-2 rounded-md"
-        >
-          OK
-        </button>
+        {showOkButton && (
+          <button
+            onClick={onClose}
+            className="bg-tertiary text-white px-4 py-2 rounded-md"
+          >
+            OK
+          </button>
+        )}
       </div>
     </div>
   );
