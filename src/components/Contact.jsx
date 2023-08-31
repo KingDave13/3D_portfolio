@@ -37,6 +37,7 @@ const Contact = () => {
 
   const [Loading, setLoading] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,6 +48,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
+      setModalMessage('Please fill out all the required fields.');
       setModalOpen(true);
       return;
     }
@@ -68,21 +70,24 @@ const Contact = () => {
     .then(
       () => {
         setLoading(false);
+        setModalMessage('Thanks for reaching out, I will be in touch.');
+        setModalOpen(true);
+
+        setTimeout(() => {
+          setModalOpen(false); 
+        }, 3000);
+
         setForm({
           name: '',
           email: '',
           message: '',
         });
-
-        setModalOpen(true);
-        setTimeout(() => {
-          setModalOpen(false); 
-        }, 2000); 
-
       },
+      
       (error) => {
         setLoading(false);
         console.log(error);
+        setModalMessage('Something went wrong');
         setModalOpen(true);
       }
     );
