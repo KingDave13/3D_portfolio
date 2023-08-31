@@ -68,12 +68,17 @@ const Contact = () => {
     .then(
       () => {
         setLoading(false);
-        setModalOpen(true);
         setForm({
           name: '',
           email: '',
           message: '',
         });
+
+        setModalOpen(true);
+        setTimeout(() => {
+          setModalOpen(false); 
+        }, 3000); // Change the duration as needed (in milliseconds)
+
       },
       (error) => {
         setLoading(false);
