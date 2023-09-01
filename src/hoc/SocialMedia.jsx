@@ -4,7 +4,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 
 const SocialMedia = () => {
 	return (
-		<div className='app__social'>
+		<div className='app_social'>
 			<div>
 				<BsTwitter />
 			</div>

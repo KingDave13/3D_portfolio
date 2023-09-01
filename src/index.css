@@ -30,6 +30,60 @@
   }
 }
 
+.app_social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 1rem;   
+}
+
+@media screen and (min-width: 2000px) {
+  .app_social {
+  width: 70px;
+  height: 70px;
+  margin: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .app_social svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.app_social div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  margin: 0.25rem 0;
+  border: 1px solid var(--lightGray-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.app_social div svg {
+  width: 15px;
+  height: 15px;
+  color: var(--gray-color);
+}
+
+.app_social div:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.app_social div svg:hover {
+  color: var(--white-color);
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
