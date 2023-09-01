@@ -6,30 +6,32 @@ import SocialMedia from './SocialMedia';
 const SectionWrapper = (Component, idName) => function HOC() {
     return (
         <>
-            <motion.section
-                variants={staggerContainer()}
-                initial='hidden'
-                whileInView='show'
-                viewport={{ once: true, amount: 0.25}}
-                className={`${styles.padding} max-w-7xl mx-auto relative
-                z-0`}
-            >
-                <span className='hash-span' id={idName}>
-                    &nbsp;
-                </span>
-                <Component />       
-            </motion.section>
-            
-            <motion.section
-                variants={staggerContainer()}
-                initial='hidden'
-                whileInView='show'
-                viewport={{ once: true, amount: 0.25}}
-                className='max-w-7xl mx-auto relative
-                z-2 flex justify-end'
-            >
-                <SocialMedia />
-            </motion.section>
+            <div className='flex items-center justify-between'>
+                <motion.section
+                    variants={staggerContainer()}
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{ once: true, amount: 0.25 }}
+                    className={`${styles.padding} max-w-7xl mx-auto 
+                    relative z-0`}
+                >
+                    <span className='hash-span' id={idName}>
+                        &nbsp;
+                    </span>
+                    <Component />
+                </motion.section>
+
+                <motion.section
+                    variants={staggerContainer()}
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{ once: true, amount: 0.25 }}
+                    className='max-w-7xl mx-auto absolute z-5 flex 
+                    justify-end'
+                >
+                    <SocialMedia />
+                </motion.section>
+            </div>
         </>
     )
 };
