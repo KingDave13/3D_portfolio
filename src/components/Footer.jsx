@@ -12,9 +12,12 @@ const Footer = () => {
         justify-center'>
             <div className='flex mt-5 items-center'>
                 <BiCopyright className='mr-2 text-[20px]'/>
-                <p className='font-poppins font-normal text-center 
+                <p className='font-poppins font-medium text-center 
                 text-[16px] leading-[27px] text-white'>
-                    2023 David Okaliwe. All Rights Reserved.
+                    2023 David Okaliwe. &nbsp;
+                    <span className='font-light'>
+                        All Rights Reserved.
+                    </span>
                 </p>
             </div>
         </div>
