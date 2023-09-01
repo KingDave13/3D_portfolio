@@ -6,7 +6,7 @@ import SocialMedia from './SocialMedia';
 const SectionWrapper = (Component, idName) => function HOC() {
     return (
         <>
-            <div className='flex items-center justify-between'>
+            <div className='flex items-center justify-end'>
                 <motion.section
                     variants={staggerContainer()}
                     initial='hidden'
