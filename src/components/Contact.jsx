@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
-import { SectionWrapper } from '../hoc';
+import { SectionWrapper2 } from '../hoc';
 import { slideIn } from '../utils/motion';
 
 const Modal = ({ message, onClose, showOkButton }) => {
@@ -188,4 +188,4 @@ const Contact = () => {
   )
 }
 
-export default SectionWrapper(Contact, 'contact');
+export default SectionWrapper2(Contact, 'contact');
