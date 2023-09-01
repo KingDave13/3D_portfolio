@@ -35,7 +35,6 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-
   padding: 1rem;   
 }
 
@@ -58,9 +57,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--white-color);
+  background-color: white;
   margin: 0.25rem 0;
-  border: 1px solid var(--lightGray-color);
+  border: 1px solid #e4e4e4;
 
   display: flex;
   justify-content: center;
@@ -72,16 +71,16 @@
 .app_social div svg {
   width: 15px;
   height: 15px;
-  color: var(--gray-color);
+  color: #6b7688;
 }
 
 .app_social div:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  background-color: #313bac;
+  border-color: #313bac;
 }
 
 .app_social div svg:hover {
-  color: var(--white-color);
+  color: white;
 }
 
 .black-gradient {
