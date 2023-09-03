@@ -23,7 +23,18 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-row mt-5 items-center justify-center'>
-           
+            {socialMedia.map((social, index, icon) => (
+                <a target='_blank' key={social.id} href={social.link}>
+                    <img 
+                    key={social.id}
+                    src={icon}
+                    alt={social.id}
+                    className={`w-[21px] h-[21px] object-contain 
+                    cursor-pointer ${index !== socialMedia.length -1 ? 
+                    'mr-6' : 'mr-0' }`}
+                    />
+                </a>
+            ))}
 		</div>
     </motion.div>
   )

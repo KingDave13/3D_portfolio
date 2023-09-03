@@ -31,17 +31,17 @@ import {
   const socialMedia = [
     {
       id: "social-media-1",
-      icon: BsTwitter,
+      Icon: BsTwitter,
       link: "https://twitter.com/DavidOkaliwe"
     },
     {
       id: "social-media-2",
-      icon: FaLinkedinIn,
+      Icon: FaLinkedinIn,
       link: "https://www.linkedin.com/in/david-okaliwe-229666234/"
     },
     {
       id: "social-media-3",
-      icon: BsGithub,
+      Icon: BsGithub,
       link: "https://github.com/KingDave13"
     },
   ];
