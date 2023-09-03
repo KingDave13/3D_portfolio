@@ -32,17 +32,17 @@ import {
     {
       id: "social-media-1",
       icon: BsTwitter,
-      link: "https://www.instagram.com/",
+      link: "https://twitter.com/DavidOkaliwe"
     },
     {
       id: "social-media-2",
-      icon: twitter,
-      link: "https://www.twitter.com/",
+      icon: FaLinkedinIn,
+      link: "https://www.linkedin.com/in/david-okaliwe-229666234/"
     },
     {
       id: "social-media-3",
-      icon: linkedin,
-      link: "https://www.linkedin.com/",
+      icon: BsGithub,
+      link: "https://github.com/KingDave13"
     },
   ];
 
