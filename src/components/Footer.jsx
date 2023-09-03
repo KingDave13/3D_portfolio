@@ -20,15 +20,33 @@ const Footer = () => {
                     <span className='font-light'>
                         All Rights Reserved.
                     </span>
-                </p>
-
-                <div className='flex flex-row md:mt-0 mt-6'>
-						<a target='_blank'> 
-                       
-						</a>
-				</div>
+                </p>            
             </div>
         </div>
+
+        <div className='flex flex-row mt-5 items-center
+        justify-center'>
+            <a 
+                target='_blank'
+                href='https://twitter.com/DavidOkaliwe'
+            > 
+                <BsTwitter />
+            </a>
+
+            <a 
+                target='_blank'
+                href='https://twitter.com/DavidOkaliwe'
+            > 
+                <BsTwitter />
+            </a>
+
+            <a 
+                target='_blank'
+                href='https://twitter.com/DavidOkaliwe'
+            > 
+                <FaLinkedinIn />
+            </a>
+		</div>
     </motion.div>
   )
 }
