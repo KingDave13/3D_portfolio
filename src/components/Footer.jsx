@@ -24,8 +24,9 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className='flex flex-row mt-5 items-center
-        justify-center'>
+        <div className={`flex flex-row mt-5 items-center
+        justify-center ${a !== a.length -1 ? 
+            'mr-6' : 'mr-0' }`}>
             <a 
                 target='_blank'
                 href='https://twitter.com/DavidOkaliwe'
@@ -37,7 +38,7 @@ const Footer = () => {
                 target='_blank'
                 href='https://twitter.com/DavidOkaliwe'
             > 
-                <BsTwitter />
+                <BsGithub />
             </a>
 
             <a 

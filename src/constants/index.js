@@ -24,7 +24,28 @@ import {
     tripguide,
     threejs,
   } from "../assets";
+
+  import { BsTwitter, BsGithub } from 'react-icons/bs';
+  import { FaLinkedinIn } from 'react-icons/fa';
   
+  const socialMedia = [
+    {
+      id: "social-media-1",
+      icon: BsTwitter,
+      link: "https://www.instagram.com/",
+    },
+    {
+      id: "social-media-2",
+      icon: twitter,
+      link: "https://www.twitter.com/",
+    },
+    {
+      id: "social-media-3",
+      icon: linkedin,
+      link: "https://www.linkedin.com/",
+    },
+  ];
+
   export const navLinks = [
     {
       id: "about",
@@ -254,4 +275,4 @@ import {
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, socialMedia, technologies, experiences, testimonials, projects };
