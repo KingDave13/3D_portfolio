@@ -34,6 +34,6 @@ const Footer = () => {
 		</div>
     </motion.div>
   )
-}
+};
 
 export default SectionWrapper2(Footer, '');
