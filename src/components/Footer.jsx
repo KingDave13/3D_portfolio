@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className='flex flex-row mt-5 items-center justify-center'>
+        <div className='flex mt-5 items-center justify-center'>
             {socialMedia.map((social, index) => (
                 <a target='_blank' key={social.id} href={social.link}>
                     <social.Icon 
