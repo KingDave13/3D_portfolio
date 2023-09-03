@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 import { BiCopyright } from 'react-icons/bi';
+import { BsTwitter, BsGithub } from 'react-icons/bs';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -19,6 +21,12 @@ const Footer = () => {
                         All Rights Reserved.
                     </span>
                 </p>
+
+                <div className='flex flex-row md:mt-0 mt-6'>
+						<a target='_blank'> 
+                       
+						</a>
+				</div>
             </div>
         </div>
     </motion.div>
