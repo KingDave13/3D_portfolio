@@ -3,9 +3,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 import { BiCopyright } from 'react-icons/bi';
-import { BsTwitter, BsGithub } from 'react-icons/bs';
-import { FaLinkedinIn } from 'react-icons/fa';
-
+import { socialMedia } from '../constants';
 
 const Footer = () => {
   return (
