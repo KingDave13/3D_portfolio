@@ -22,29 +22,8 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className={`flex flex-row mt-5 items-center
-        justify-center ${a !== a.length -1 ? 
-            'mr-6' : 'mr-0' }`}>
-            <a 
-                target='_blank'
-                href='https://twitter.com/DavidOkaliwe'
-            > 
-                <BsTwitter />
-            </a>
-
-            <a 
-                target='_blank'
-                href='https://twitter.com/DavidOkaliwe'
-            > 
-                <BsGithub />
-            </a>
-
-            <a 
-                target='_blank'
-                href='https://twitter.com/DavidOkaliwe'
-            > 
-                <FaLinkedinIn />
-            </a>
+        <div className='flex flex-row mt-5 items-center justify-center'>
+           
 		</div>
     </motion.div>
   )
